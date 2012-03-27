@@ -1,1 +1,4 @@
-Nothing~
+注意:
+1)eclipse环境编码为UTF-8
+2)java编译环境为1.6以上
+3)如果工程BotApi提示缺少jar包,导入工程lib文件夹下的两个jar包
