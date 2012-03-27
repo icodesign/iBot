@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/Rela"
+    >
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="right"
+		>
+	    <ImageView 
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:background="@drawable/bot"
+	        android:id="@+id/iv_head_left"
+	        android:layout_gravity="center"/>
+		<TextView 
+		    android:id="@+id/TextView01"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@android:color/black"
+			android:background="@drawable/chatto_bg_voice_pressed"
+		>  
+		</TextView>
+		<ImageView 
+	        android:layout_width="40dp"
+	        android:layout_height="40dp"
+	        android:background="@drawable/master"
+	        android:id="@+id/iv_head_right"
+	        android:layout_gravity="center"/>
+	</LinearLayout>
+</RelativeLayout>

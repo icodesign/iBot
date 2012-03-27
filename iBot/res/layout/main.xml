@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@android:color/white">
+  
+  <!-- 上面的   包括imageview textview-->
+		<RelativeLayout 
+		android:layout_height="50dip"
+		android:layout_width="fill_parent"
+		android:id="@+id/main_top"
+		>
+			<LinearLayout
+			  xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="horizontal"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+			  android:id="@+id/layout_main" 
+			  android:layout_marginTop="5dip"
+			  >
+					<ImageView 
+				        android:layout_marginLeft="5dip"
+				        android:layout_width="40dp"
+				        android:layout_height="40dp"
+				        android:background="@drawable/bot"
+			        />
+			    	<TextView 
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="Fairy Bot"
+				        android:layout_marginLeft="10dip"
+				        android:id="@+id/tv_username"
+				        android:textSize="20dip"
+				        android:layout_gravity="center"        
+		        	/>
+			 </LinearLayout>
+	    </RelativeLayout>
+	<!--最下面的下面的 包括发送等控件 -->
+    <LinearLayout 
+		android:layout_height="50dp"
+		android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true"
+		android:paddingTop="5dip"
+		android:id="@+id/main_bottom"
+		>
+		<ImageButton 
+		    android:background="@drawable/popup"
+		    android:layout_width="43dp"
+		    android:layout_height="43dp"
+		    android:id="@+id/ivbtn_popup"/>
+		<ImageButton 
+		    android:background="@drawable/setmode"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:id="@+id/ivbtn_setmod"/>
+		<ImageButton 
+		    android:background="@drawable/tmsg"
+		    android:layout_width="40dp"
+		    android:layout_height="40dp"
+		    android:id="@+id/ivbtn_tmsg"
+		    android:visibility="gone"/>
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:id="@+id/linearlayout_sendmsg"
+		    android:visibility="visible"
+		    >
+		    <EditText 
+			    android:layout_width="200dip"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/et_msgcontent"
+			    />
+			<Button 
+			    android:layout_width="70dip"
+			    android:layout_height="wrap_content"
+			    android:text="发送"
+			    android:id="@+id/btn_sendmsg"
+			    android:layout_weight="1"
+			    />
+		</LinearLayout>	
+		<Button 
+		    android:layout_marginLeft="10dip"
+		    android:layout_marginRight="10dip"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="按住说话"
+		    android:visibility="gone"
+		    android:id="@+id/btnSpeak"
+		    />
+	</LinearLayout>
+
+
+	<!-- 中间的内容 -->
+		<RelativeLayout 
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+			android:layout_above="@id/main_bottom"
+			android:layout_below="@id/main_top"
+			android:layout_marginTop="5dip"
+			>	
+	
+			<LinearLayout
+			  xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+			  android:id="@+id/layout_main" 
+			  >
+			    <ListView
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:divider="@null"
+				android:dividerHeight="0dip"
+				android:cacheColorHint="#00000000"
+				android:listSelector="@drawable/list_item_style"
+				android:id="@+id/itemlist"
+				/>
+			</LinearLayout>
+		</RelativeLayout>
+</RelativeLayout>
